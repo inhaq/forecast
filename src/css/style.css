@@ -1,0 +1,265 @@
+:root {
+    --main: #0e2161c4;
+}
+
+/* css reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+
+/* my css */
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+.top {
+    height: calc(55vh - 40px);
+    min-height: 300px;
+    background: rgb(244,252,255);
+    background: linear-gradient(0deg, rgba(244,252,255,1) 0%, rgba(3,189,248,1) 100%);
+    width: 100vw;
+    position: relative;
+}
+
+.logo-img {
+    font-size: 38px;
+}
+
+.mid {
+    height: 40px;
+    background-color: var(--main);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom {
+    height: 45vh;
+    width: 100vw;
+}
+
+.day-cards {
+    height: 35%;
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.city-cards {
+    height: 65%;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    background: #99e1fc;
+    border: 0;
+    border-radius: 15px;
+    font-size: 15px;
+    width: 200px;
+    height: 24px;
+    padding: 5px 15px;
+    font-family: "Roboto-Regular", sans-serif;
+    color: var(--main);
+    opacity: 0.77;
+    margin-top: 5px;
+}
+
+.search-input:focus {
+    outline: 0;
+    opacity: 1;
+}
+
+.logo-text {
+    font-family: "Roboto-Regular",sans-serif;
+    font-size: 24px;
+    color: #fff;
+    text-transform: lowercase;
+    text-shadow: 0px 0px 10px var(--main);
+}
+
+::placeholder {
+    color: var(--main);
+    opacity: 0.7;
+}
+
+.logo, .search {
+    display: inline-block;
+}
+
+.logo {
+    float: left;
+}
+
+.search {
+    float: right;
+    position: relative;
+}
+
+.clear {
+    clear: both;
+}
+
+.nav {
+    padding: 30px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    height: 20px;
+    width: 16px;
+    fill: var(--main) !important;
+}
+
+.time {
+    color: #fff;
+    font-size: 16px;
+    font-family: "Roboto-Light", sans-serif;
+}
+
+.day {
+    background-color: #F8F7F6;
+    height: 100%;
+    box-shadow: 0px 7px 10px #8fb6bf78;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.day-icon {
+    width: 60px;
+}
+
+.city {
+    background-color: #F8F7F6;
+    height: 75%;
+    box-shadow: 0px 7px 10px #8fb6bf78;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.temp {
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: "Roboto-Medium", sans-serif;
+}
+
+.day-name {
+    margin-top: -25px;
+    font-size: 18px;
+    font-family: "Roboto-Light", sans-serif;
+}
+
+.city-name {
+    font-size: 18px;
+    font-family: "Roboto-Light", sans-serif;
+}
+
+.city-temp {
+    font-size: 32px;
+    font-family: "Roboto-Medium", sans-serif;
+}
+
+.city-icon {
+    width: 80px;
+    margin-left: 20px;
+}
+
+.status {
+    font-size: 16px;
+    font-family: "Roboto-Light", sans-serif;
+}
+
+.temp-icon {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-city {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    bottom: 30px;
+}
+
+.main-city-name, .main-status {
+    font-size: 28px;
+    font-family: "Roboto-Regular", sans-serif;
+    padding: 20px;
+}
+
+.main-temp-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.main-city-temp {
+    font-size: 4rem;
+    margin-bottom: -30px;
+    font-family: "Roboto-Light", sans-serif;
+}
+
+.main-city-icon {
+    margin-right: 20px;
+    width: 100px;
+}
