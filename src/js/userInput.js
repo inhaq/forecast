@@ -1,6 +1,5 @@
 import {getWeather, getForecast} from './fetcher';
 
-
 let userInput = function userInput() {
 
   const searchInput = document.querySelector('.search-input');
@@ -15,6 +14,6 @@ let userInput = function userInput() {
 
   searchIcon.addEventListener('click', getInput);
   searchInput.addEventListener('keyup', getInput);
-}
+};
 
 export {userInput};

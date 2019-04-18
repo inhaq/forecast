@@ -19,8 +19,8 @@ function renderMainUI(data) {
 function renderDaysUI(data) {
   const time = document.querySelector('.time');
   const dayCards = document.querySelector('.day-cards');
-  if(data.cod === '200'){
-  dayCards.innerHTML = '';
+  if (data.cod === '200'){
+    dayCards.innerHTML = '';
   }
 
   for (let i = 0; i < data.list.length; i += 8) {
@@ -44,7 +44,7 @@ function renderMyCities(data) {
   const cityCards = document.querySelector('.city-cards');
   // cityCards.innerHTML = '';
 
-  cityCards.insertAdjacentHTML('beforeend',`<div class="city city1">
+  cityCards.insertAdjacentHTML('beforeend', `<div class="city city1">
     <div class="city-name">${data.name}, ${data.sys.country}</div>
   <div class="temp-icon">
     <div class="city-temp">${Math.round(data.main.temp) + '°C'}</div>

@@ -24,14 +24,18 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
+    font-family: "Roboto-Light", sans-serif;
 }
+
 ol, ul {
     list-style: none;
 }
@@ -56,8 +60,6 @@ ol, ul {
 .top {
     height: calc(55vh - 40px);
     min-height: 300px;
-    background: rgb(244,252,255);
-    background: linear-gradient(0deg, rgba(244,252,255,1) 0%, rgba(3,189,248,1) 100%);
     width: 100vw;
     position: relative;
 }
@@ -104,14 +106,13 @@ ol, ul {
     background: #99e1fc;
     border: 0;
     border-radius: 15px;
-    font-size: 15px;
-    width: 200px;
-    height: 24px;
+    font-size: 16px;
+    width: 250px;
+    height: 35px;
     padding: 5px 15px;
     font-family: "Roboto-Regular", sans-serif;
     color: var(--main);
     opacity: 0.77;
-    margin-top: 5px;
 }
 
 .search-input:focus {
@@ -120,7 +121,7 @@ ol, ul {
 }
 
 .logo-text {
-    font-family: "Roboto-Regular",sans-serif;
+    font-family: "Roboto-Regular", sans-serif;
     font-size: 24px;
     color: #fff;
     text-transform: lowercase;
@@ -150,7 +151,7 @@ ol, ul {
 }
 
 .nav {
-    padding: 30px;
+    padding: 45px 45px 0;
 }
 
 .search-icon {
@@ -160,6 +161,7 @@ ol, ul {
     height: 20px;
     width: 16px;
     fill: var(--main) !important;
+    cursor: pointer;
 }
 
 .time {
@@ -251,6 +253,7 @@ ol, ul {
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
+    height: 75px;
 }
 
 .main-city-temp {
@@ -262,4 +265,56 @@ ol, ul {
 .main-city-icon {
     margin-right: 20px;
     width: 100px;
+}
+
+/* switch */
+
+.checkbox {
+    position: absolute;
+
+    z-index: 1;
+    -webkit-appearance: none;
+    width: 80px;
+    height: 40px;
+    background: #87dcfb;
+    box-shadow: inset 0 0 5px #8fb6bf78;
+    outline: none;
+    cursor: pointer;
+    margin-left: 155px;
+}
+
+.checkbox:before, .checkbox:after {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    transition: 0.2s;
+}
+
+.checkbox:before {
+    content: '°C';
+    left: 0;
+    color: var(--main);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .3);
+}
+
+.checkbox:after {
+    content: '°F';
+    right: 0;
+    color: #d7dedc;
+    box-shadow: none;
+}
+
+.checkbox:checked:before {
+    color: #d7dedc;
+    box-shadow: none;
+}
+
+.checkbox:checked:after {
+    color: #000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .3);
 }
